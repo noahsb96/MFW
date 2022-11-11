@@ -12,7 +12,7 @@ const path = require("path");
 // base URL
 let baseUrl = "http://localhost";
 //port connection
-const PORT = process.env.PORT || process.env.BACKEND_PORT || 3009;
+const PORT = process.env.BACKEND_PORT || 3009;
 
 //middleware
 app.use(express.json());
