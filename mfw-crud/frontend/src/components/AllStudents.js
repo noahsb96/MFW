@@ -25,8 +25,8 @@ export class AllMerch extends Component {
         this.setState({ merch: data.merch });
       });
   };
+
   render() {
-    console.log("hey what is in my state?", this.state.merch);
     return (
       <div>
         <h1>Merch</h1>
@@ -46,7 +46,9 @@ export class AllMerch extends Component {
                   <td>
                     <Link to={`/${merch._id}`}>{merch.Name}</Link>
                   </td>
-                  <td> {merch.clothingType}</td>
+                  <td>{merch.ClothingType}</td>
+                  <td>Price</td>
+                  <td>{merch.Description}</td>
                 </tr>
               );
             })}

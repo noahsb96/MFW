@@ -5,8 +5,8 @@ export class Header extends Component {
   render() {
     return (
       <header>
-        <h1>Merch</h1>
         <Nav />
+        <h1>Merch</h1>
       </header>
     );
   }

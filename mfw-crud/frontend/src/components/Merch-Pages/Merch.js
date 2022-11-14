@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import Header from "../Header/Header";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+function withParams(Component) {
+  return (props) => <Component {...props} params={useParams()} />;
+}
 
 export class Merch extends Component {
   constructor(props) {
@@ -46,7 +51,7 @@ export class Merch extends Component {
         this.setState({
           Name: data.merch.Name,
           Sizes: data.merch.Sizes,
-          clothingType: data.merch.clothingType,
+          ClothingType: data.merch.ClothingType,
           Price: data.merch.Price,
           Description: data.merch.Description,
         });
@@ -56,14 +61,13 @@ export class Merch extends Component {
   render() {
     return (
       <>
-        <Header />
         <div>
           <h1>{this.state.Name}</h1>
           <table>
             <tbody>
               <tr>
                 <td>
-                  <h3>ClothingType</h3> {this.state.clothingType}
+                  <h3>ClothingType</h3> {this.state.ClothingType}
                 </td>
                 <td>
                   <h3>Description</h3> {this.state.Description}
@@ -71,10 +75,13 @@ export class Merch extends Component {
               </tr>
             </tbody>
           </table>
+          <div className="redirect">
+            <Link to={`/${this.props.params.id}/edit`}>Edit</Link>
+          </div>
         </div>
       </>
     );
   }
 }
 
-export default Merch;
+export default withParams(Merch);
