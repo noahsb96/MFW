@@ -8,8 +8,8 @@ const MerchSchema = new mongoose.Schema({
   ClothingType: { type: String, required: true },
   Price: { type: Decimal128, required: true },
   Description: { type: String },
-  img: { type: String, required: true },
-  Sizes: { type: Array, required: true },
+  img: { type: String },
+  Sizes: { type: Array },
 });
 
 // CREATE MODEL

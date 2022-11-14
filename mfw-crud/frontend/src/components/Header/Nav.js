@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
@@ -20,7 +20,7 @@ export default function Nav() {
           <Link to="/new">New Merch</Link>
         </li>
         <li>
-          <button onClick={signOut}>Log Out</button>
+          <button onClick={signOut}>Log Out</button>{" "}
         </li>
       </ul>
     </nav>

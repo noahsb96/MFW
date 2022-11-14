@@ -19,24 +19,11 @@ export class Merch extends Component {
     };
   }
   componentDidMount() {
-    this.getMerchId();
-    this.getMerch();
+    const { id } = this.props.params;
+    this.getMerch(id);
   }
 
-  componentDidUpdate() {
-    this.getMerch();
-  }
-
-  getMerchId = () => {
-    this.setState({
-      MerchId:
-        window.location.href.split("/")[
-          window.location.href.split("/").length - 1
-        ],
-    });
-  };
-
-  getMerch = () => {
+  getMerch = (id) => {
     fetch(
       `http://localhost:${process.env.REACT_APP_BACKEND_PORT}/${this.state.MerchId}`
     )
@@ -58,6 +45,20 @@ export class Merch extends Component {
       });
   };
 
+  handleDelete = () => {
+    const { id } = this.props.params;
+    fetch(
+      `http://localhost:${process.env.REACT_APP_BACKEND_PORT}/${this.state.MerchId}`,
+      {
+        method: "DELETE",
+      }
+    ).then((response) => {
+      if (response.status === 200) {
+        window.location.href = window.location.href.split(id)[0];
+      }
+    });
+  };
+
   render() {
     return (
       <>
@@ -75,8 +76,11 @@ export class Merch extends Component {
               </tr>
             </tbody>
           </table>
-          <div className="redirect">
+          <div>
             <Link to={`/${this.props.params.id}/edit`}>Edit</Link>
+            <Link onClick={this.handleDelete} to={`/`}>
+              Delete
+            </Link>
           </div>
         </div>
       </>
