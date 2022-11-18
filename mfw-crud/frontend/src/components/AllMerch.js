@@ -31,14 +31,6 @@ export class AllMerch extends Component {
       <div>
         <h1>Merch</h1>
         <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>ClothingType</th>
-              <th>Price</th>
-              <th>Description</th>
-            </tr>
-          </thead>
           <tbody>
             {this.state.merch.map((merch) => {
               return (
@@ -46,6 +38,7 @@ export class AllMerch extends Component {
                   <td>
                     <Link to={`/${merch._id}`}>{merch.Name}</Link>
                   </td>
+                  <img width="300" src={merch.img}></img>
                   <td>{merch.ClothingType}</td>
                   <td>Price</td>
                   <td>{merch.Description}</td>
