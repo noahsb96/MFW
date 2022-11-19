@@ -9,6 +9,7 @@ export class NewMerch extends Component {
       clothingType: "",
       Price: 0,
       Description: "",
+      img: "",
     };
   }
 
@@ -26,6 +27,7 @@ export class NewMerch extends Component {
         ClothingType: this.state.ClothingType,
         Price: this.state.Price,
         Description: this.state.Description,
+        img: this.state.img,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -73,6 +75,14 @@ export class NewMerch extends Component {
             name="Description"
             onChange={(e) => this.handleChange(e)}
             value={this.state.Description}
+          />
+          <label htmlFor="img">Image Link: </label>
+          <input
+            type="text"
+            id="img"
+            name="img"
+            onChange={(e) => this.handleChange(e)}
+            value={this.state.img}
           />
           <button>Add Merch</button>
         </form>

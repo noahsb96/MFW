@@ -38,3 +38,49 @@ a {
   text-decoration: none;
   color: white;
 }
+
+#merch-container{
+  margin-top: 10em;
+  border-top: 3px solid red;
+  border-bottom: 3px solid red ;
+}
+
+#home-table{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#merch-header{
+  text-align: center;
+  font-size: 3em
+}
+
+#merch-table{
+  display: flex;
+  flex-direction: row;
+}
+
+#merch-item{
+  display: flex;
+  margin: 0 4em;
+  padding-top: 2em;
+  padding-bottom: 4em;
+}
+
+td{
+  display: flex;
+}
+
+#merch-image{
+  background-color: white;
+}
+
+#home-merch-name{
+  font-size: 1.5vw;
+  margin-top: 0.5em;
+}
+
+#home-merch-price{
+  font-size: 1.5em;
+}

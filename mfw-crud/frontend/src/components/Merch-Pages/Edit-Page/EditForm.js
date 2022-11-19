@@ -14,6 +14,7 @@ export class EditForm extends Component {
       clothingType: "",
       Price: 0,
       Description: "",
+      img: "",
     };
   }
 
@@ -38,6 +39,7 @@ export class EditForm extends Component {
           ClothingType: data.merch.ClothingType,
           Price: data.merch.Price,
           Description: data.merch.Description,
+          img: data.merch.img,
         });
       });
   };
@@ -57,6 +59,7 @@ export class EditForm extends Component {
         ClothingType: this.state.ClothingType,
         Price: this.state.Price,
         Description: this.state.Description,
+        img: this.state.img,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -104,6 +107,14 @@ export class EditForm extends Component {
             name="Description"
             onChange={(event) => this.handleChange(event)}
             value={this.state.Description}
+          />
+          <label htmlFor="img">Image Link: </label>
+          <input
+            type="text"
+            id="img"
+            name="img"
+            onChange={(event) => this.handleChange(event)}
+            value={this.state.img}
           />
           <button>Submit your changes</button>
         </form>

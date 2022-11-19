@@ -38,7 +38,7 @@ export class AllMerch extends Component {
                   <td>
                     <Link to={`/${merch._id}`}>{merch.Name}</Link>
                   </td>
-                  <img width="300" src={merch.img}></img>
+                  <img width="300" src={merch.img} alt="merch-pic"></img>
                   <td>{merch.ClothingType}</td>
                   <td>Price</td>
                   <td>{merch.Description}</td>

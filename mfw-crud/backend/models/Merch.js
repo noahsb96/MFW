@@ -1,4 +1,3 @@
-const { Decimal128 } = require("bson");
 const mongoose = require("mongoose");
 
 //  CREATE SCHEMA
@@ -6,7 +5,7 @@ const mongoose = require("mongoose");
 const MerchSchema = new mongoose.Schema({
   Name: { type: String, required: true },
   ClothingType: { type: String, required: true },
-  Price: { type: Decimal128, required: true },
+  Price: { type: Number, required: true },
   Description: { type: String },
   img: { type: String },
   Sizes: { type: Array },
