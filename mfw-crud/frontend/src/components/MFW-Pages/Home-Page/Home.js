@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "./Header/Header";
+import Header from "../../Header/Header";
 import FeaturedMerch from "./FeaturedMerch";
 
 export class Home extends Component {

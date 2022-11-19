@@ -27,7 +27,10 @@ app.use(
 app.use(cookieParser());
 app.use(
   cors({
-    origin: [`${baseUrl}:${process.env.FRONTEND_PORT}`],
+    origin: [
+      `${baseUrl}:${process.env.FRONTEND_PORT}`,
+      `https://rest.bandsintown.com/artists/Mouth%20For%20War/events?app_id=${process.env.BANDS_IN_TOWN_ID}`,
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

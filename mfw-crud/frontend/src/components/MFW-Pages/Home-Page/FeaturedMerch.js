@@ -42,6 +42,7 @@ export class FeaturedMerch extends Component {
                         height="300em"
                         src={merch.img}
                         id="merch-image"
+                        alt="merch-pic"
                       ></img>
                     </Link>
                     <td id="home-merch-name">{merch.Name}</td>
