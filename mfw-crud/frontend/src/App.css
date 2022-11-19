@@ -145,3 +145,16 @@ td{
 #flex-item{
   margin: 0em 2em;
 }
+
+#about-container{
+  margin: 5em 25em;
+}
+
+#about-header{
+  font-size: 3em;
+}
+
+#about-p{
+  font-size: 2em;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

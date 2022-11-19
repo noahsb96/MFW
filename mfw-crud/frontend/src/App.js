@@ -9,6 +9,7 @@ import Register from "./User-Pages/Register";
 import Signin from "./User-Pages/Signin";
 import "react-toastify/dist/ReactToastify.css";
 import Tour from "./components/MFW-Pages/Tour-Page/Tour";
+import About from "./components/MFW-Pages/About-Page/About";
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route path="/:id" element={<Show />} />
           <Route path="/:id/edit" element={<Edit />} />
           <Route path="/tour" element={<Tour />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </>
     );
