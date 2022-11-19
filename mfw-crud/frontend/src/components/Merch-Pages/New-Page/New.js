@@ -1,12 +1,14 @@
 import React from "react";
-import Header from "../../Headers/RootHeader/Header";
+import Header from "../../Header/Header";
 import NewMerch from "./NewMerch";
 
-export default function New() {
+const New = () => {
   return (
     <div>
       <Header />
       <NewMerch />
     </div>
   );
-}
+};
+
+export default New;

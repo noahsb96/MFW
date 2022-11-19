@@ -16,6 +16,7 @@ export class Merch extends Component {
       clothingType: "",
       Price: 0,
       Description: "",
+      img: "",
     };
   }
   componentDidMount() {
@@ -24,9 +25,7 @@ export class Merch extends Component {
   }
 
   getMerch = (id) => {
-    fetch(
-      `http://localhost:${process.env.REACT_APP_BACKEND_PORT}/${this.state.MerchId}`
-    )
+    fetch(`http://localhost:${process.env.REACT_APP_BACKEND_PORT}/${id}`)
       .then((res) => {
         if (res.status === 200) {
           return res.json();
@@ -41,6 +40,7 @@ export class Merch extends Component {
           ClothingType: data.merch.ClothingType,
           Price: data.merch.Price,
           Description: data.merch.Description,
+          img: data.merch.img,
         });
       });
   };
@@ -62,17 +62,16 @@ export class Merch extends Component {
   render() {
     return (
       <>
-        <div>
-          <h1>{this.state.Name}</h1>
+        <div id="show-container">
+          <img src={this.state.img} alt="show-pic" width="600" id="show-pic"></img>
           <table>
             <tbody>
               <tr>
-                <td>
-                  <h3>ClothingType</h3> {this.state.ClothingType}
-                </td>
-                <td>
-                  <h3>Description</h3> {this.state.Description}
-                </td>
+                <div id="show-item">
+                  <h1 id="show-header">{this.state.Name}</h1>
+                  <td id="show-td">${this.state.Price}</td>
+                  <td id="show-td">Shipping Calculated at Checkout</td>
+                </div>
               </tr>
             </tbody>
           </table>
