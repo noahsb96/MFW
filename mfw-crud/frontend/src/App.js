@@ -10,6 +10,7 @@ import Signin from "./User-Pages/Signin";
 import "react-toastify/dist/ReactToastify.css";
 import Tour from "./components/MFW-Pages/Tour-Page/Tour";
 import About from "./components/MFW-Pages/About-Page/About";
+// import Music from "./components/MFW-Pages/Music-Page/Music";
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
           <Route path="/:id/edit" element={<Edit />} />
           <Route path="/tour" element={<Tour />} />
           <Route path="/about" element={<About />} />
+          {/* <Route path="/music" element={<Music />} /> */}
         </Routes>
       </>
     );

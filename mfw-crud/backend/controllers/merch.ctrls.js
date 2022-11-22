@@ -10,6 +10,7 @@ const index = (req, res) => {
     });
   });
 };
+
 const show = (req, res) => {
   db.Merch.findById(req.params.id, (error, merch) => {
     if (error) return res.status(400).json({ error: error.message });

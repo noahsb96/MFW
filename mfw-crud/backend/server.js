@@ -13,7 +13,6 @@ const path = require("path");
 let baseUrl = "http://localhost";
 //port connection
 const PORT = process.env.BACKEND_PORT || 3009;
-
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -29,7 +28,7 @@ app.use(
   cors({
     origin: [
       `${baseUrl}:${process.env.FRONTEND_PORT}`,
-      "https://rest.bandsintown.com/artists/Mouth%20For%20War/events?app_id=f8f1586cd655cceb2d942b294596dfb8",
+      `https://rest.bandsintown.com/artists/Mouth%20For%20War/events?app_id=${process.env.BANDS_IN_TOWN_ID}`,
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
@@ -43,6 +42,7 @@ require("./config/db.connections");
 const routes = require("./routes");
 app.use("/", require("./routes/mfw.routes"));
 app.use("/", require("./routes/users.routes"));
+app.use("/", require("./routes/music.routes"));
 
 //app.listen for port
 app.listen(PORT, () => {
