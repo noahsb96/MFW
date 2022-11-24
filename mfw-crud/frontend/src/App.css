@@ -48,6 +48,7 @@ a {
   margin: 10em 0 2em;
   border-top: 3px solid red;
   border-bottom: 3px solid red ;
+  margin-bottom: 10em;
 }
 
 #home-table{
@@ -124,6 +125,7 @@ td{
 #tour-table{
   margin: auto;
   font-size: 3em;
+  margin-bottom: 4em;
 }
 
 #tour-container{
@@ -148,6 +150,7 @@ td{
 
 #about-container{
   margin: 5em 25em;
+  margin-bottom: 20em;
 }
 
 #about-header{
@@ -195,4 +198,19 @@ td{
   cursor: pointer;
   padding: .25em .5em;
   margin-bottom: 5em;
+}
+
+#photo-header{
+  margin-top: 2em;
+  font-size: 3em;
+  text-align: center;
+}
+
+#photos-container{
+  margin: 4em 5em;
+}
+
+#photos-pic{
+  width: 30em;
+  margin: 3em;
 }
