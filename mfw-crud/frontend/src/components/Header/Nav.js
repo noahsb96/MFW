@@ -23,11 +23,11 @@ export default function Nav() {
             Tour
           </Link>
         </li>
-        {/* <li>
+        <li>
           <Link className="navbar-links" to="/music">
             Music
           </Link>
-        </li> */}
+        </li>
         <li>
           <Link className="navbar-links" to="/new">
             New Merch

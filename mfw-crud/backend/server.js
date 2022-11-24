@@ -42,7 +42,6 @@ require("./config/db.connections");
 const routes = require("./routes");
 app.use("/", require("./routes/mfw.routes"));
 app.use("/", require("./routes/users.routes"));
-app.use("/", require("./routes/music.routes"));
 
 //app.listen for port
 app.listen(PORT, () => {
