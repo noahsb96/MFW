@@ -44,8 +44,8 @@ const register = async (req, res, next) => {
   // next is called alongside request and response because there are functions and properties in this function that don't just utilize express
   try {
     // try hook
-    const { email, password } = req.body; // gets the email and password that the user types in the form in the request body
-    const user = await User.create({ email, password }); // waits until a new user is created with an email and password
+    const { email, password, isAdmin } = req.body; // gets the email and password that the user types in the form in the request body
+    const user = await User.create({ email, password, isAdmin }); // waits until a new user is created with an email and password
     const token = createToken(user._id); // new jwt token is created with the user id
 
     res.cookie("jwt", token, {

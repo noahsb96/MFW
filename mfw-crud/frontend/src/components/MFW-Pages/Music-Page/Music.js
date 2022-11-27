@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../Header/Header";
+import Footer from "../../Footer/Footer";
 
 export default function Music() {
   return (
@@ -53,6 +54,7 @@ export default function Music() {
           </a>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

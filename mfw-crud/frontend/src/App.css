@@ -26,6 +26,23 @@ header {
   font-size: 2em;
 }
 
+footer{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 4em;
+  border-top: 2px solid white;
+}
+
+#logos{
+  margin: 4em 0;
+}
+
+#logo{
+  margin: 0 2em;
+}
+
 ul {
   margin: 0;
   padding: 0;

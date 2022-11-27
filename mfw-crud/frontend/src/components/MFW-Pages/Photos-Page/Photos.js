@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../Header/Header";
+import Footer from "../../Footer/Footer";
 
 export default function About() {
     return (
@@ -48,6 +49,7 @@ export default function About() {
         src="https://scontent-den4-1.xx.fbcdn.net/v/t39.30808-6/296465780_542748194213707_4259018421450594867_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=0jEGP5RIkqEAX-qqjdV&tn=X5dvXVNYsNJIfPaV&_nc_ht=scontent-den4-1.xx&oh=00_AfC-wk1bqOc-e2M2OQx-gt_KT9e7hevMEeaSivkP0xs6Og&oe=63849A9E"
       ></img>
         </div>
+        <Footer />
       </div>
     );
   }

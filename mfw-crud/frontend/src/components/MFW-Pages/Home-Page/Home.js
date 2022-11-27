@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "../../Header/Header";
 import FeaturedMerch from "./FeaturedMerch";
+import Footer from "../../Footer/Footer";
 
 export class Home extends Component {
   render() {
@@ -14,6 +15,7 @@ export class Home extends Component {
           width="100%"
         ></img>
         <FeaturedMerch />
+        <Footer />
       </div>
     );
   }
