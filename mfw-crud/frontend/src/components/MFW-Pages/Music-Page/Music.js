@@ -7,7 +7,7 @@ export default function Music() {
     <div>
       <Header />
       <img
-        src="https://i.imgur.com/ImVdwXl.jpg"
+        src="https://i.imgur.com/jDBCJ8a.jpg"
         alt="about-pic"
         id="about-pic"
         width="100%"

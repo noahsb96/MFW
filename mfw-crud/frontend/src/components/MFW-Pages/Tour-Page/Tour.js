@@ -11,7 +11,7 @@ const Tour = () => {
         alt="tour-pic"
         id="tour-pic"
         width="100%"
-        src="https://i.imgur.com/38nDD7w.jpg"
+        src="https://i.imgur.com/pTwYwnc.jpg"
       ></img>
       <TourDates />
       <Footer />

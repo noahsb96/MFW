@@ -9,7 +9,7 @@ export class Home extends Component {
       <div>
         <Header />
         <img
-          src="https://i.imgur.com/n3jtS3U.jpg"
+          src="https://i.imgur.com/rsokXOF.jpg"
           alt="home-pic"
           id="home-pic"
           width="100%"

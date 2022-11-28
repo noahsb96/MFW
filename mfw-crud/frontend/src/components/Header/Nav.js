@@ -44,6 +44,11 @@ export default function Nav() {
           </Link>
         </li>
         <li>
+          <Link className="navbar-links" to="/contact">
+            Contact
+          </Link>
+        </li>
+        <li>
           <button className="navbar-links" onClick={signOut}>
             Log Out
           </button>{" "}

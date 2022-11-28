@@ -13,6 +13,7 @@ import About from "./components/MFW-Pages/About-Page/About";
 import Music from "./components/MFW-Pages/Music-Page/Music";
 import Photos from "./components/MFW-Pages/Photos-Page/Photos";
 import Videos from "./components/MFW-Pages/Videos-Page/Videos";
+import Contact from "./components/MFW-Pages/Contact Page/Contact";
 
 class App extends Component {
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
           <Route path="/music" element={<Music />} />
           <Route path="/photos" element={<Photos />} />
           <Route path="/videos" element={<Videos />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </>
     );
