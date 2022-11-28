@@ -31,9 +31,8 @@ footer{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0 4em;
   border-top: 2px solid white;
-  margin-top: 2em;
+  margin-top: auto;
 }
 
 #logos{
@@ -131,6 +130,7 @@ td{
 
 #show-pic{
   background-color: white;
+  margin-bottom: 2em;
 }
 
 #show-header{
@@ -262,4 +262,20 @@ input{
 #photos-pic{
   width: 30em;
   margin: 3em;
+}
+
+#videos-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#video-header{
+  text-align: center;
+  font-size: 3em;
+  margin-top: 2em;
+}
+
+iframe{
+  margin: 4em 0;
 }
