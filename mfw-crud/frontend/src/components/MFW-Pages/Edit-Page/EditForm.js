@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { useParams } from "react-router-dom";
+import AutosizeInput from "react-input-autosize";
 
 function withParams(Component) {
   return (props) => <Component {...props} params={useParams()} />;
@@ -74,49 +75,58 @@ export class EditForm extends Component {
   render() {
     return (
       <div>
-        <h1>Edit {this.state.Name}</h1>
-        <form onSubmit={this.handleSubmit}>
+        <h1 id="edit-header">Edit {this.state.Name}</h1>
+        <form id="edit-form" onSubmit={this.handleSubmit}>
           <label htmlFor="studentName">Name: </label>
-          <input
+          <AutosizeInput
             type="text"
             id="Name"
             name="Name"
+            placeholder="Name"
+            inputStyle={{ fontSize: 30 }}
             onChange={(event) => this.handleChange(event)}
             value={this.state.Name}
           />
           <label htmlFor="ClothingType">ClothingType: </label>
-          <input
+          <AutosizeInput
             type="text"
             id="ClothingType"
             name="ClothingType"
+            placeholder="Clothing Type"
+            inputStyle={{ fontSize: 30 }}
             onChange={(event) => this.handleChange(event)}
             value={this.state.ClothingType}
           />
           <label htmlFor="Price">Price: </label>
-          <input
+          <AutosizeInput
             type="number"
             id="Price"
             name="Price"
+            inputStyle={{ fontSize: 30 }}
             onChange={(event) => this.handleChange(event)}
             value={this.state.Price}
           />
           <label htmlFor="Description">Description: </label>
-          <input
+          <AutosizeInput
             type="text"
             id="Description"
             name="Description"
+            placeholder="Description"
+            inputStyle={{ fontSize: 30 }}
             onChange={(event) => this.handleChange(event)}
             value={this.state.Description}
           />
           <label htmlFor="img">Image Link: </label>
-          <input
+          <AutosizeInput
             type="text"
             id="img"
             name="img"
+            placeholder="Image Link"
+            inputStyle={{ fontSize: 30 }}
             onChange={(event) => this.handleChange(event)}
             value={this.state.img}
           />
-          <button>Submit your changes</button>
+          <button id="stream-button">Submit your changes</button>
         </form>
       </div>
     );

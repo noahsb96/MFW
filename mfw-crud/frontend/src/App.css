@@ -33,6 +33,7 @@ footer{
   justify-content: space-around;
   padding: 0 4em;
   border-top: 2px solid white;
+  margin-top: 2em;
 }
 
 #logos{
@@ -64,7 +65,6 @@ a {
 #merch-container{
   margin: 10em 0 2em;
   border-top: 3px solid red;
-  border-bottom: 3px solid red ;
   margin-bottom: 10em;
 }
 
@@ -89,6 +89,21 @@ a {
   margin: 0 4em;
   padding-top: 2em;
   padding-bottom: 4em;
+}
+
+#crud-btns{
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  font-size: 2em;
+}
+
+#edit{
+  margin-right: 1em;
+}
+
+#delete{
+  margin-right: 1em;
 }
 
 td{
@@ -131,6 +146,23 @@ td{
 #show-td{
   margin-left: 3em;
   font-size: 2em;
+}
+
+#edit-header{
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 3em;
+}
+
+#edit-form{
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  align-items: center;
+}
+
+input{
+  margin-bottom: 2em;
 }
 
 #tour-header{

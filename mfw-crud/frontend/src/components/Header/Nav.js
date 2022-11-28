@@ -29,11 +29,6 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link className="navbar-links" to="/new">
-            New Merch
-          </Link>
-        </li>
-        <li>
           <Link className="navbar-links" to="/about">
             About
           </Link>

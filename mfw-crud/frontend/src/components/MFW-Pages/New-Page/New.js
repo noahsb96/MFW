@@ -8,7 +8,6 @@ const New = () => {
     <div>
       <Header />
       <NewMerch />
-      <Footer />
     </div>
   );
 };

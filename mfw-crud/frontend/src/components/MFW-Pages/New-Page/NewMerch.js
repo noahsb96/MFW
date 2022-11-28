@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AutosizeInput from "react-input-autosize";
 
 export class NewMerch extends Component {
   constructor(props) {
@@ -42,49 +43,58 @@ export class NewMerch extends Component {
   render() {
     return (
       <div>
-        <h1>Create merch</h1>
-        <form onSubmit={this.handleSubmit}>
+        <h1 id="edit-header">Create merch</h1>
+        <form id="edit-form" onSubmit={this.handleSubmit}>
           <label htmlFor="studentName">Name: </label>
-          <input
+          <AutosizeInput
             type="text"
             id="Name"
             name="Name"
+            placeholder="Merch Name"
+            inputStyle={{ fontSize: 30 }}
             onChange={(e) => this.handleChange(e)}
             value={this.state.Name}
           />
           <label htmlFor="ClothingType">ClothingType: </label>
-          <input
+          <AutosizeInput
             type="text"
             id="ClothingType"
             name="ClothingType"
+            placeholder="Clothing Type"
+            inputStyle={{ fontSize: 30 }}
             onChange={(e) => this.handleChange(e)}
             value={this.state.ClothingType}
           />
           <label htmlFor="Price">Price: </label>
-          <input
+          <AutosizeInput
             type="number"
             id="Price"
             name="Price"
+            inputStyle={{ fontSize: 30 }}
             onChange={(e) => this.handleChange(e)}
             value={this.state.Price}
           />
           <label htmlFor="Description">Description: </label>
-          <input
+          <AutosizeInput
             type="text"
             id="Description"
             name="Description"
+            placeholder="Description"
+            inputStyle={{ fontSize: 30 }}
             onChange={(e) => this.handleChange(e)}
             value={this.state.Description}
           />
           <label htmlFor="img">Image Link: </label>
-          <input
+          <AutosizeInput
             type="text"
             id="img"
             name="img"
+            placeholder="Image Link"
+            inputStyle={{ fontSize: 30 }}
             onChange={(e) => this.handleChange(e)}
             value={this.state.img}
           />
-          <button>Add Merch</button>
+          <button id="stream-button">Add Merch</button>
         </form>
       </div>
     );

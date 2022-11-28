@@ -63,7 +63,12 @@ export class Merch extends Component {
     return (
       <>
         <div id="show-container">
-          <img src={this.state.img} alt="show-pic" width="600" id="show-pic"></img>
+          <img
+            src={this.state.img}
+            alt="show-pic"
+            width="600"
+            id="show-pic"
+          ></img>
           <table>
             <tbody>
               <tr>
@@ -71,16 +76,21 @@ export class Merch extends Component {
                   <h1 id="show-header">{this.state.Name}</h1>
                   <td id="show-td">${this.state.Price}</td>
                   <td id="show-td">Shipping Calculated at Checkout</td>
+                  <div id="crud-btns">
+                    <Link id="edit" to={`/${this.props.params.id}/edit`}>
+                      Edit
+                    </Link>
+                    <Link id="delete" onClick={this.handleDelete} to={`/`}>
+                      Delete
+                    </Link>
+                    <Link to="/new">
+                      New Merch
+                    </Link>
+                  </div>
                 </div>
               </tr>
             </tbody>
           </table>
-          <div>
-            <Link to={`/${this.props.params.id}/edit`}>Edit</Link>
-            <Link onClick={this.handleDelete} to={`/`}>
-              Delete
-            </Link>
-          </div>
         </div>
       </>
     );
