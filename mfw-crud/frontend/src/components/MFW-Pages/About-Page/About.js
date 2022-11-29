@@ -17,8 +17,8 @@ export default function About() {
         <p id="about-p">
           Mouth for War are a five piece metal x hardcore band from Colorado.
           Formed in 2019 by members of Bruise and Remain and Sustain, the band
-          hit the ground running with the release of their debut EP, An Ear Kept
-          to the Ground, and multiple tours. Since then, the band has put out
+          hit the ground running with the release of their debut EP "An Ear Kept
+          to the Ground" and multiple tours. Since then, the band has put out
           their first full length record, Life Cast In Glass. The band offers
           its own take on classic hardcore and metal, which sounds like Kickback
           and Sentence with a smooth modern twist of influences from Lamb of God

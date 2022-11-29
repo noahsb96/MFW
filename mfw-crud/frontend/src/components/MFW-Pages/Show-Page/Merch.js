@@ -47,12 +47,9 @@ export class Merch extends Component {
 
   handleDelete = () => {
     const { id } = this.props.params;
-    fetch(
-      `http://localhost:${process.env.REACT_APP_BACKEND_PORT}/${this.state.MerchId}`,
-      {
-        method: "DELETE",
-      }
-    ).then((response) => {
+    fetch(`http://localhost:${process.env.REACT_APP_BACKEND_PORT}/${id}`, {
+      method: "DELETE",
+    }).then((response) => {
       if (response.status === 200) {
         window.location.href = window.location.href.split(id)[0];
       }
@@ -83,9 +80,7 @@ export class Merch extends Component {
                     <Link id="delete" onClick={this.handleDelete} to={`/`}>
                       Delete
                     </Link>
-                    <Link to="/new">
-                      New Merch
-                    </Link>
+                    <Link to="/new">New Merch</Link>
                   </div>
                 </div>
               </tr>
