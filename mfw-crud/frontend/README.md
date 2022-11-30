@@ -50,3 +50,7 @@ As a band I want to be able to give fans current updates and news about what we 
 ## Unsolved Problems and Future Features
 
 I will be implementing a checkout button to buy merch on the webpage and I will be rendering this data with Shopify Hydrogen. I will also be adding a login button so we can log in to your shopify account and buy products from Shopify
+
+## API's
+
+Used the Bandsintown API to render the show dates for the band that are listed on the band's Bandsintown account. Access is fetched from the a get request to the bandsintown API with a link to the band's Bandsintown URL, specified for events with a client id added to the end of the url. When this data is fetched, you should be able to receive a json response with the event data.
