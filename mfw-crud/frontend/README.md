@@ -49,7 +49,7 @@ As a band I want to be able to give fans current updates and news about what we 
 
 ## Unsolved Problems and Future Features
 
-I will be implementing a checkout button to buy merch on the webpage and I will be rendering this data with Shopify Hydrogen. I will also be adding a login button so we can log in to your shopify account and buy products from Shopify
+I will be implementing a checkout button to buy merch on the webpage and I will be rendering this data with Shopify Hydrogen. I will also be adding a login button so we can log in to your shopify account and buy products from Shopify. Also adding an actual merch page to show all the merch that is available to buy.
 
 ## API's
 
