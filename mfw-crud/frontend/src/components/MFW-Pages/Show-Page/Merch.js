@@ -72,7 +72,7 @@ export class Merch extends Component {
                 <div id="show-item">
                   <h1 id="show-header">{this.state.Name}</h1>
                   <td id="show-td">${this.state.Price}</td>
-                  <td id="show-td">Shipping Calculated at Checkout</td>
+                  <td id="show-td">{this.state.Description}</td>
                   <div id="crud-btns">
                     <Link id="edit" to={`/${this.props.params.id}/edit`}>
                       Edit
