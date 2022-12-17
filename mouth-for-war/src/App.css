@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  background-image: url(https://cdn.shopify.com/s/files/1/0105/2367/2657/t/4/assets/pf-756397a4--MFWBG.png?v=1630696007);
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+}
+
+header {
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em 0;
+  border-bottom: 2px solid white;
+}
+
+.navbar-links {
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: bisque;
+  font-size: 1.5em;
+}
+
+footer{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 2px solid white;
+  margin-top: auto;
+}
+
+#logos{
+  margin: 4em 0;
+}
+
+#logo{
+  margin: 0 2em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+
+li {
+  padding: 0 30px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+td{
+  display: flex;
+}
+
+#merch-image{
+  background-color: white;
+}
+
+#tour-header{
+  text-align: center;
+  font-size: 3em;
+  margin-top: 2em;
+}
+
+#tour-table{
+  margin: auto;
+  font-size: 3em;
+  margin-bottom: 4em;
+}
+
+#tour-container{
+  border-top: 3px solid red;
+  border-bottom: 3px solid red ;
+  margin: 1em 0;
+}
+
+#tour-container:hover{
+  background:rgba(255, 0, 0, 0.5);
+}
+
+#tour-flexbox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#flex-item{
+  margin: 0em 2em;
+}
+
+#about-container{
+  margin: 5em 25em;
+  margin-bottom: 20em;
+}
+
+#about-header{
+  font-size: 3em;
+}
+
+#about-p{
+  font-size: 2em;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#album-header{
+  margin-top: 2em;
+  font-size: 3em;
+  text-align: center;
+}
+
+#album-container{
+  display: flex;
+  justify-content: center;
+  margin: 3em 0;
+}
+
+#album-info{
+  padding: 0 2em;
+}
+
+#album-pic{
+  width: 20em;
+  border: 3px solid red;
+}
+
+#album-text{
+  margin: .5em 0;
+  font-size: 2.25em;
+}
+
+#stream-button{
+  background-color: red;
+  color: white;
+  font-weight: 900;
+  font-size: 1.5em;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: .05em;
+  cursor: pointer;
+  padding: .25em .5em;
+  margin-bottom: 5em;
+}
+
+#photo-header{
+  margin-top: 2em;
+  font-size: 3em;
+  text-align: center;
+}
+
+#photos-container{
+  margin: 4em 5em;
+}
+
+#photos-pic{
+  width: 30em;
+  margin: 3em;
+}
+
+#videos-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#video-header{
+  text-align: center;
+  font-size: 3em;
+  margin-top: 2em;
+}
+
+iframe{
+  margin: 4em 0;
+}
+
+#contact-header{
+  text-align: center;
+  font-size: 3em;
+  margin-top: 2em;
+}
+
+#contact-container{
+  display: flex;
+  justify-content: center;
+}
+
+#contact-item{
+  font-size: 2em;
+  margin: 2em 5em;
+  margin-bottom: 10em;
+  text-align: center;
+  border: 3px solid red;
+  padding: 1em;
+  width: 10em;
+}
+
+#contact-item:hover{
+  background:rgba(255, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#product-image{
+  width: 400px;
+  height: 400px;
+  margin: 2em;
+  background-color: white;
+}
+
+#merch-header{
+  text-align: center;
+  font-size: 3em;
+  margin-top: 2em
+}
+
+#merch-div{
+  margin: auto;
+}
+
+#merch-container{
+  display: grid;
+  grid-template-columns: 0.25fr 0.25fr 0.25fr;
+  justify-content: center;
+}
+
+#product-info{
+  margin-top: -2em;
+  margin-bottom: 4em;
+  margin-left: 1.25em;
+  font-size: 1.5em;
+}
+
+#price{
+  margin-top: -0.5em;
+}
+
+#cart-container{
+  display: flex;
+  margin-left: 8em;
+}
+
+.cart{
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: bisque;
+  font-size: 1.5em;
+}
