@@ -64,10 +64,6 @@ td{
   display: flex;
 }
 
-#merch-image{
-  background-color: white;
-}
-
 #tour-header{
   text-align: center;
   font-size: 3em;
@@ -220,27 +216,6 @@ iframe{
   text-align: center;
   font-size: 3em;
   margin-top: 2em
-}
-
-#merch-div{
-  margin: auto;
-}
-
-#merch-container{
-  display: grid;
-  grid-template-columns: 0.25fr 0.25fr 0.25fr;
-  justify-content: center;
-}
-
-#product-info{
-  margin-top: -2em;
-  margin-bottom: 4em;
-  margin-left: 1.25em;
-  font-size: 1.5em;
-}
-
-#price{
-  margin-top: -0.5em;
 }
 
 #cart-container{
