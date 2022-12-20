@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../context/shopContext";
 import { useContext } from "react";
-import { MdShoppingBasket } from 'react-icons/md'
+import { MdShoppingBasket } from "react-icons/md";
+import { Text, Icon, Image } from "@chakra-ui/react";
 
 export default function Nav() {
-  const { openCart, openMenu, checkout } = useContext(ShopContext)
+  const { openCart, openMenu, checkout } = useContext(ShopContext);
 
   return (
     <nav>
@@ -45,9 +46,15 @@ export default function Nav() {
             Contact
           </Link>
         </li>
-        <div id="cart-container">
-        <li className="cart"><MdShoppingBasket onClick={() => openCart()} id="cart-icon"></MdShoppingBasket></li>
-        </div>
+        <Icon
+          fill="bisque"
+          as={MdShoppingBasket}
+          w={38}
+          h={38}
+          cursor="pointer"
+          onClick={() => openCart()}
+          ml={200}
+        />
       </ul>
     </nav>
   );

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
-  background-image: url(https://cdn.shopify.com/s/files/1/0105/2367/2657/t/4/assets/pf-756397a4--MFWBG.png?v=1630696007);
-  color: white;
-  font-family: 'Bebas Neue', cursive;
+  background-image: url(https://cdn.shopify.com/s/files/1/0105/2367/2657/t/4/assets/pf-756397a4--MFWBG.png?v=1630696007) !important;
+  color: white !important;
+  font-family: 'Bebas Neue', cursive !important;
 }
 
 header {
@@ -23,12 +23,12 @@ header {
   font: inherit;
   cursor: pointer;
   color: bisque;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 footer{
   background-color: black;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: space-around;
   border-top: 2px solid white;
@@ -37,6 +37,7 @@ footer{
 
 #logos{
   margin: 4em 0;
+  display: flex;
 }
 
 #logo{
@@ -221,15 +222,4 @@ iframe{
 #cart-container{
   display: flex;
   margin-left: 8em;
-}
-
-.cart{
-  text-decoration: none;
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  color: bisque;
-  font-size: 1.5em;
 }
