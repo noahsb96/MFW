@@ -30,22 +30,22 @@ const ProductPage = () => {
     <>
       <Header />
       <Cart />
-      <Box>
+      <Flex ml="20em" mt="8em" mb="5em">
         <Grid templateColumns="repeat(2, 1fr)" />
         <Image h={500} w={500} src={product.images[0].src} />
-        <Box>
-          <Heading>{product.title}</Heading>
-          <Text>
+        <Box ml="10em">
+          <Heading id="heading" fontSize="3em" mb="1em">{product.title}</Heading>
+          <Text fontSize="2em" mb="1em">
             ${product.variants[0].price.amount[0]}
             {product.variants[0].price.amount[1]}
           </Text>
-          <Text>{product.description}</Text>
+          <Text fontSize="1.5em" mb="2em" mr="5em">{product.description}</Text>
           <Button onClick={() => addItemToCheckout(product.variants[0].id, 1)}>
             <Text color="black">Add To Cart</Text>
           </Button>
         </Box>
-      </Box>
-      <Footer />
+      </Flex>
+      <Footer id="product-page-footer" />
     </>
   );
 };

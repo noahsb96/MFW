@@ -223,3 +223,7 @@ iframe{
   display: flex;
   margin-left: 8em;
 }
+
+#heading{
+  font-family: 'Bebas Neue', cursive !important;
+}
