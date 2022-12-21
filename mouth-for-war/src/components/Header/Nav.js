@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ShopContext } from "../../context/shopContext";
 import { useContext } from "react";
 import { MdShoppingBasket } from "react-icons/md";
-import { Text, Icon, Image } from "@chakra-ui/react";
+import { Text, Icon, Image, Badge, Box } from "@chakra-ui/react";
 
 export default function Nav() {
   const { openCart, openMenu, checkout } = useContext(ShopContext);
@@ -55,6 +55,7 @@ export default function Nav() {
           onClick={() => openCart()}
           ml={200}
         />
+        <Badge backgroundColor="black" textColor="red" fontSize="1.5em" ml=".5em" display="flex" alignItems="center">{checkout.lineItems?.length}</Badge>
       </ul>
     </nav>
   );

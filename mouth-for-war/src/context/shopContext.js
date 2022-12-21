@@ -73,10 +73,6 @@ export class shopProvider extends Component {
     this.setState({ isCartOpen: true });
   };
 
-  closeMenu = () => {};
-
-  openMenu = () => {};
-
   render() {
     return (
       <ShopContext.Provider
