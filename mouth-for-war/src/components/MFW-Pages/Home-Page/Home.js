@@ -28,20 +28,25 @@ const Home = () => {
         width="100%"
       ></img>
       <h1 id="merch-header">Merch</h1>
-      <Box>
+      <Box mt="2em" mb="4em" justifyContent="center" display="flex">
         <Grid templateColumns="repeat(3, 1fr)">
           {products.slice(0, 6).map((product) => (
-            <Link to={`/merch/${product.handle}`} key={product.title}>
-            <Box _hover={{ opacity: '80%'}} textAlign="left">
-              <Image id="product-image" src={product.images[0].src} />
-
-              <Text>{product.title}</Text>
-              <Text>
+            <Box m="2em" textAlign="left">
+              <Link to={`/merch/${product.handle}`} key={product.title}>
+                <Image
+                  id="product-image"
+                  _hover={{ opacity: "80%" }}
+                  src={product.images[0].src}
+                />
+              </Link>
+              <Text fontSize="2em" ml="1em">
+                {product.title}
+              </Text>
+              <Text fontSize="2em" ml="1em">
                 ${product.variants[0].price.amount[0]}
                 {product.variants[0].price.amount[1]}
               </Text>
-              </Box>
-            </Link>
+            </Box>
           ))}
         </Grid>
       </Box>
