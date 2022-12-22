@@ -31,7 +31,7 @@ const Home = () => {
       <Box mt="2em" mb="4em" justifyContent="center" display="flex">
         <Grid templateColumns="repeat(3, 1fr)">
           {products.slice(0, 6).map((product) => (
-            <Box m="2em" textAlign="left">
+            <Box m="2em" textAlign="left" key={product.id}>
               <Link to={`/merch/${product.handle}`} key={product.title}>
                 <Image
                   id="product-image"
