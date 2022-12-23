@@ -41,18 +41,28 @@ class TourDates extends Component {
                 "MM-dd-YYYY"
               ).toDateString();
               return (
-                <a href={`${dates.url}`}>
-                  <div id="tour-container">
-                    <tr key={dates._id} id="tour-flexbox">
-                      <td id="flex-item">{formattedDate}</td>
-                      <td id="flex-item">{dates.venue.name}</td>
-                      <td id="flex-item">{dates.venue.location}</td>
-                      <a id="flex-item" href={`${dates.url}`}>
-                        Tickets
-                      </a>
-                    </tr>
-                  </div>
-                </a>
+                <tr key={dates._id} id="tour-flexbox">
+                  <td id="flex-item">
+                    <a id="tour-link" href={dates.url}>
+                      {formattedDate}
+                    </a>
+                  </td>
+                  <td id="flex-item">
+                    <a id="tour-link" href={dates.url}>
+                      {dates.venue.name}
+                    </a>
+                  </td>
+                  <td id="flex-item">
+                    <a id="tour-link" href={dates.url}>
+                      {dates.venue.location}
+                    </a>
+                  </td>
+                  <td id="flex-item" href={`${dates.url}`}>
+                    <a id="tour-link" href={dates.url}>
+                      Tickets
+                    </a>
+                  </td>
+                </tr>
               );
             })}
           </tbody>
