@@ -3,10 +3,20 @@ import { Link } from "react-router-dom";
 import { ShopContext } from "../../context/shopContext";
 import { useContext } from "react";
 import { MdShoppingBasket } from "react-icons/md";
-import { Text, Icon, Image, Badge, Box } from "@chakra-ui/react";
+import {
+  Icon,
+  Badge,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@chakra-ui/react";
+
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 export default function Nav() {
-  const { openCart, openMenu, checkout } = useContext(ShopContext);
+  const { openCart, checkout } = useContext(ShopContext);
 
   return (
     <nav>
@@ -16,11 +26,26 @@ export default function Nav() {
             Home
           </Link>
         </li>
-        <li key="{merch}">
-          <Link className="navbar-links" to="/merch">
-            Merch
-          </Link>
-        </li>
+        <Menu key="{merch}">
+          <MenuButton
+            colorScheme="black"
+            pt="2"
+            fontWeight="500"
+            fontSize="2em"
+            color="bisque"
+            as={Button}
+            rightIcon={<ChevronDownIcon />}
+          >
+            Shop
+          </MenuButton>
+          <MenuList backgroundColor="black" color="bisque">
+            <MenuItem backgroundColor="black">Download</MenuItem>
+            <MenuItem backgroundColor="black">Create a Copy</MenuItem>
+            <MenuItem backgroundColor="black">Mark as Draft</MenuItem>
+            <MenuItem backgroundColor="black">Delete</MenuItem>
+            <MenuItem backgroundColor="black">Attend a Workshop</MenuItem>
+          </MenuList>
+        </Menu>
         <li key="{tour}">
           <Link className="navbar-links" to="/tour">
             Tour
@@ -55,7 +80,16 @@ export default function Nav() {
           onClick={() => openCart()}
           ml={200}
         />
-        <Badge backgroundColor="black" textColor="red" fontSize="1.5em" ml=".5em" display="flex" alignItems="center">{checkout.lineItems?.length}</Badge>
+        <Badge
+          backgroundColor="black"
+          textColor="red"
+          fontSize="1.5em"
+          ml=".5em"
+          display="flex"
+          alignItems="center"
+        >
+          {checkout.lineItems?.length}
+        </Badge>
       </ul>
     </nav>
   );
