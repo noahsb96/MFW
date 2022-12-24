@@ -71,12 +71,6 @@ td{
   margin-top: 2em;
 }
 
-#tour-table{
-  margin: auto;
-  font-size: 3em;
-  margin-bottom: 4em;
-}
-
 #tour-flexbox:hover{
   background:rgba(255, 0, 0, 0.5);
   cursor: pointer;
@@ -86,16 +80,14 @@ td{
   display: flex;
   border-top: 3px solid red;
   border-bottom: 3px solid red ;
-  margin: 1em 0;
+  margin: 2em 1em 4em;
+  font-size: 3em;
+  justify-content: center;
 }
 
 #flex-item{
   position: relative;
   padding: 0 2em;
-}
-
-#tour-link{
-  position: relative;
 }
 
 #about-container{

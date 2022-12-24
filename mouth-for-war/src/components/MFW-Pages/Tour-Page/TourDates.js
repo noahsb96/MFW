@@ -33,40 +33,27 @@ class TourDates extends Component {
     return (
       <div>
         <h1 id="tour-header">Upcoming Dates</h1>
-        <table id="tour-table">
-          <tbody>
-            {this.state.tourInfo.map((dates) => {
-              const formattedDate = parseISO(
-                dates.datetime,
-                "MM-dd-YYYY"
-              ).toDateString();
-              return (
-                <tr key={dates._id} id="tour-flexbox">
-                  <td id="flex-item">
-                    <a id="tour-link" href={dates.url}>
-                      {formattedDate}
-                    </a>
-                  </td>
-                  <td id="flex-item">
-                    <a id="tour-link" href={dates.url}>
-                      {dates.venue.name}
-                    </a>
-                  </td>
-                  <td id="flex-item">
-                    <a id="tour-link" href={dates.url}>
-                      {dates.venue.location}
-                    </a>
-                  </td>
-                  <td id="flex-item" href={`${dates.url}`}>
-                    <a id="tour-link" href={dates.url}>
-                      Tickets
-                    </a>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        <div>
+          {" "}
+          {this.state.tourInfo.map((dates) => {
+            const formattedDate = parseISO(
+              dates.datetime,
+              "MM-dd-YYYY"
+            ).toDateString();
+            return (
+              <a id="tour-link" href={dates.url} key={dates.id}>
+                <div id="tour-flexbox">
+                  <div id="flex-item">{formattedDate}</div>
+                  <div id="flex-item">{dates.venue.name}</div>
+                  <div id="flex-item">{dates.venue.location}</div>
+                  <div id="flex-item" href={`${dates.url}`}>
+                    Tickets
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
       </div>
     );
   }
