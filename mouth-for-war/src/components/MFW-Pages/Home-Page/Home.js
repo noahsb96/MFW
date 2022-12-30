@@ -7,13 +7,13 @@ import Cart from "../../Cart/Cart";
 import { Box, Grid, Text, Image } from "@chakra-ui/react";
 
 const Home = () => {
-  const { fetchAllProducts, products } = useContext(ShopContext);
+  const { fetchAllProducts, fetchAllCollections, products, collections } = useContext(ShopContext);
 
   useEffect(() => {
-    fetchAllProducts();
-  }, [fetchAllProducts]);
+    fetchAllCollections();
+  }, [fetchAllCollections]);
 
-  console.log(products);
+  console.log(collections);
 
   if (!products) return <div>Loading...</div>;
 

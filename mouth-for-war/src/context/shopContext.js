@@ -10,6 +10,8 @@ const client = Client.buildClient({
 
 export class shopProvider extends Component {
   state = {
+    collection: {},
+    collections: [],
     product: {},
     products: [],
     checkout: {},
@@ -55,6 +57,11 @@ export class shopProvider extends Component {
     this.setState({ checkout: checkout });
   };
 
+  fetchAllCollections = async () => {
+    const collections = await client.collection.fetchAllWithProducts();
+    this.setState({ collections: collections });
+  }
+
   fetchAllProducts = async () => {
     const products = await client.product.fetchAll();
     this.setState({ products: products });
@@ -86,6 +93,7 @@ export class shopProvider extends Component {
           openCart: this.openCart,
           closeMenu: this.closeMenu,
           openMenu: this.openMenu,
+          fetchAllCollections: this.fetchAllCollections,
         }}
       >
         {this.props.children}
