@@ -7,15 +7,17 @@ import Cart from "../../Cart/Cart";
 import { Box, Grid, Text, Image } from "@chakra-ui/react";
 
 const Home = () => {
-  const { fetchAllProducts, fetchAllCollections, products, collections } = useContext(ShopContext);
+  const { fetchAllCollections, collections, products } = useContext(ShopContext);
 
   useEffect(() => {
     fetchAllCollections();
   }, [fetchAllCollections]);
 
-  console.log(collections);
+  const CollectionProducts = collections.map(collection => collection.products);
 
-  if (!products) return <div>Loading...</div>;
+  console.log(CollectionProducts[5]);
+
+  if (!collections) return <div>Loading...</div>;
 
   return (
     <div>
@@ -27,10 +29,10 @@ const Home = () => {
         id="home-pic"
         width="100%"
       ></img>
-      <h1 id="merch-header">Merch</h1>
+      <h1 id="merch-header">Featured Merch</h1>
       <Box mt="2em" mb="4em" justifyContent="center" display="flex">
         <Grid templateColumns="repeat(3, 1fr)">
-          {products.slice(0, 6).map((product) => (
+          {CollectionProducts[5].slice(0, 6).map((product) => (
             <Box m="2em" textAlign="left" key={product.id}>
               <Link to={`/merch/${product.handle}`} key={product.title}>
                 <Image
